@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains block_linker.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function block_linker_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the block_linker module.
+    case 'help.page.block_linker':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
